@@ -12,10 +12,29 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
-
+// let themeStat = "dark";
+// check theme state
+if (window.localStorage.getItem("theme")) {
+  window.localStorage.getItem("theme") == "dark"
+    ? document.getElementById("theme-body").classList.add("dark")
+    : document.getElementById("theme-body").classList.remove("dark");
+} else {
+  // document.getElementById("theme-body").classList.toggle("dark");
+}
 // Dark/Light mode toggle
 document.getElementById("theme-toggle").addEventListener("click", () => {
-  document.getElementById("theme-body").classList.toggle("dark");
+  // check theme state
+  if (window.localStorage.getItem("theme")) {
+    if (window.localStorage.getItem("theme") == "dark") {
+      window.localStorage.setItem("theme", "light");
+      document.getElementById("theme-body").classList.remove("dark");
+    } else {
+      window.localStorage.setItem("theme", "dark");
+      document.getElementById("theme-body").classList.add("dark");
+    }
+  } else {
+    document.getElementById("theme-body").classList.toggle("dark");
+  }
   document
     .getElementById("theme-toggle")
     .querySelector("i")

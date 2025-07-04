@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Ahmed Sayed Abdelwanes, a Front-End Developer, delivering responsive and dynamic web applications."
+    />
+    <title>Ahmed Sayed Abdelwanes | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="https://via.placeholder.com/32x32?text=AW"
+      type="image/png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  </head>
+  <body
+    class="bg-gray-100 font-sans transition-colors duration-300"
+    id="theme-body"
+  >
+    <!-- Header -->
+    <header>
+      <nav
+        class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 fixed top-0 w-full z-50"
+      >
+        <div
+          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+        >
+          <a href="index.html" class="flex items-center">
+            <img
+              src="./media/imgs/logo-1.png"
+              class="h-12"
+              alt="Ahmed Abdelwanes Logo"
+            />
+          </a>
+          <div class="flex items-center lg:order-2">
+            <button
+              id="theme-toggle"
+              class="theme-toggle text-gray-700 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white px-4 py-2"
+            >
+              <i class="fas fa-moon text-xl"></i>
+            </button>
+            <button
+              data-collapse-toggle="mobile-menu"
+              type="button"
+              class="mobile-menu inline-flex items-center p-2 ml-1 text-lg text-gray-500 lg:hidden hover:text-shadow-md focus:outline-none hover:text-amber-400 focus:text-amber-700 transition"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div
+            class="nav-links hidden w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu"
+          >
+            <ul
+              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block py-2 pr-4 pl-3 hover:text-orange-600 lg:p-0 hover:bg-orange-300 rounded-lg lg:bg-white lg:text-gray-600 lg:hover:bg-white bg-amber-500 text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="block py-2 pr-4 pl-3 hover:text-orange-600 lg:p-0 hover:bg-orange-300 rounded-lg lg:bg-white text-gray-400 lg:hover:bg-white"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="projects.html"
+                  class="block py-2 pr-4 pl-3 hover:text-orange-600 lg:p-0 hover:bg-orange-300 rounded-lg lg:bg-white text-gray-400 lg:hover:bg-white"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="block py-2 pr-4 pl-3 hover:text-orange-600 lg:p-0 hover:bg-orange-300 rounded-lg lg:bg-white text-gray-400 lg:hover:bg-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="section hero-bg text-white h-screen flex items-center justify-center text-center"
+    >
+      <div id="particles-js"></div>
+
+      <div class="flex flex-col md:flex-row items-center justify-evenly">
+        <div class="show flex-1 min-w-52">
+          <img
+            src="./media/imgs/logo-1.png"
+            alt="logo"
+            class="main-img animate__animated animate__backInDown w-52"
+          />
+        </div>
+        <div class="info text-amber-50 text-start pl-3 max-w-2xl">
+          <p class="hello italic font-bold text-lg text-amber-600">
+            Hello I'am?
+          </p>
+
+          <h2 id="typing" class="h-fit font-extrabold">
+            <!-- Text will be inserted here by JavaScript -->
+          </h2>
+
+          <script>
+            const names = [
+              "Software Engineer",
+              "Frontend Developer",
+              "Ahmed Abdelwanes"
+            ];
+            const ele = document.getElementById("typing");
+            let index = 0;
+
+            function typeText() {
+              // Reset animation by removing and re-adding the class
+              ele.classList.remove("typing-effect");
+              void ele.offsetWidth; // Trigger reflow to restart animation
+              ele.innerText = names[index];
+              ele.classList.add("typing-effect");
+
+              // Move to the next text
+              index = (index + 1) % names.length;
+
+              // Schedule the next text change after the animation completes
+              setTimeout(typeText, 3000); // Adjust timing as needed (2s animation + 1s pause)
+            }
+
+            // Start the typing animation
+            typeText();
+          </script>
+
+          <!-- <img
+            src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=38BDF8&center=true&vCenter=true&width=600&lines=Hi+%F0%9F%91%8B%2C+I'm+Ahmed+Abdelwanis;Angular+Frontend+Developer;UI%2FUX+Enthusiast;Clean+Code+Advocate"
+            alt="Typing SVG"
+          /> -->
+          <!-- <h2 class="text-4xl mb-3.5 font-medium typing-text" [@typeAnimation]="varName">{{ varName }}</h2> -->
+          <p
+            class="text-lg md:text-xl mb-8 animate__animated animate__fadeInUp"
+          >
+            Crafting responsive, dynamic, and user-friendly web applications
+            with modern technologies to bring your ideas to life.
+          </p>
+
+          <div class="relative w-fit h-fit mt-4 mr-14 ml-auto md:mr-0 md:ml-0">
+            <a href="projects.html">
+              <button
+                class="text-sm font-medium px-4 py-2 relative bg-gradient-to-r from-red-600 to-amber-500"
+              >
+                Explore Me
+              </button>
+            </a>
+            <span class="z-10"> </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section sect-about bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-8 animate__animated animate__fadeIn"
+        >
+          About Me
+        </h2>
+        <p
+          class="text-lg text-gray-700 max-w-3xl mx-auto animate__animated animate__fadeInUp"
+        >
+          I'm Ahmed, a dedicated Front-End Developer with a passion for creating
+          seamless and innovative web experiences. With expertise in JavaScript,
+          TypeScript, HTML, and CSS, I specialize in building responsive and
+          dynamic applications tailored to client needs.
+        </p>
+      </div>
+      <!-- button -->
+      <div class="relative h-fit mt-4 text-center text-white">
+        <a href="about.html">
+          <button
+            class="text-sm font-medium px-4 py-2 relative bg-gradient-to-r from-red-600 to-amber-500"
+          >
+            About Me
+          </button>
+        </a>
+      </div>
+      <!-- button -->
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-8 animate__animated animate__fadeIn"
+        >
+          Skills
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div
+            class="skill bg-white p-4 rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-orange-50"
+          >
+            <i class="fab fa-js text-yellow-500 text-xl"></i> JavaScript
+          </div>
+          <div
+            class="skill bg-white p-4 rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-blue-50"
+          >
+            <i class="fas fa-code text-blue-900 text-xl"></i> TypeScript
+          </div>
+          <div
+            class="skill bg-white p-4 rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-orange-50"
+          >
+            <i class="fab fa-html5 text-orange-500 text-xl"></i> HTML5
+          </div>
+          <div
+            class="skill bg-white p-4 rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-blue-50"
+          >
+            <i class="fab fa-css3-alt text-blue-500 text-xl"></i> CSS3
+          </div>
+          <div
+            class="skill bg-white p-4 rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-purple-50"
+          >
+            <i class="fab fa-bootstrap text-purple-600 text-xl"></i> Bootstrap
+          </div>
+          <div
+            class="skill bg-white p-4 rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-orange-50"
+          >
+            <i class="fab fa-git-alt text-orange-600 text-xl"></i> Git/GitHub
+          </div>
+          <div
+            class="skill bg-white p-4 rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-pink-50"
+          >
+            <i class="fas fa-pen-nib text-pink-500 text-xl"></i> Figma
+          </div>
+          <div
+            class="skill bg-white p-4 rounded-lg shadow-md flex items-center justify-center gap-2 hover:bg-blue-50"
+          >
+            <i class="fas fa-code-branch text-blue-900 text-xl"></i> Angular
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-8 animate__animated animate__fadeIn"
+        >
+          Certifications
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          <div
+            class="text-center bg-gray-50 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp"
+          >
+            JavaScript Bootcamp - Elzero School (2024)
+          </div>
+          <div
+            class="text-center bg-gray-50 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp"
+          >
+            HTML & CSS Fundamentals - Elzero School (2024)
+          </div>
+          <div
+            class="text-center bg-gray-50 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp"
+          >
+            Git and GitHub - Big Data Channel (2024)
+          </div>
+          <div
+            class="text-center bg-gray-50 p-4 rounded-lg shadow-md animate__animated animate__fadeInUp"
+          >
+            Angular Development - ITI YouTube & Tag Channel (2024)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-bg text-white py-8">
+      <div id="footer-particles"></div>
+      <div class="footer-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex flex-col items-center md:items-start">
+            <a href="index.html" class="mb-4"
+              ><img
+                src="./media/imgs/logo-1.png"
+                class="w-16"
+                alt="Ahmed Abdelwanes Logo"
+            /></a>
+            <p class="text-sm text-gray-200">
+              Crafting innovative web solutions with passion and precision.
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <h3 class="text-lg font-bold mb-4">Connect With Me</h3>
+            <div class="flex space-x-4">
+              <a
+                href="https://linkedin.com/in/ahmed-weso"
+                target="_blank"
+                class="footer-link text-gray-200 hover:text-yellow-400"
+                ><i class="fab fa-linkedin text-2xl"></i
+              ></a>
+              <a
+                href="https://github.com/Ahmed-AbdElwanes"
+                target="_blank"
+                class="footer-link text-gray-200 hover:text-yellow-400"
+                ><i class="fab fa-github text-2xl"></i
+              ></a>
+              <a
+                href="https://khamsat.com/user/ahmed_abdelwanis1"
+                target="_blank"
+                class="footer-link text-gray-200 hover:text-yellow-400"
+                ><i class="fas fa-briefcase text-2xl"></i
+              ></a>
+
+              <a
+                href="https://wa.me/201114046293"
+                target="_blank"
+                class="footer-linktext-gray-200 hover:text-yellow-400 text-2xl"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+          <div class="flex flex-col items-center md:items-end">
+            <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+            <p class="text-sm text-gray-200">
+              <i class="fas fa-envelope mr-2"></i
+              ><a
+                href="mailto:ahmedabdalwanes842@gmail.com"
+                class="footer-link hover:text-yellow-400"
+                >ahmedabdalwanes842@gmail.com</a
+              >
+            </p>
+            <p class="text-sm text-gray-200">
+              <i class="fas fa-phone mr-2"></i
+              ><a
+                href="tel:+201556650785"
+                class="footer-link hover:text-yellow-400"
+                >+201556650785</a
+              >
+            </p>
+            <a
+              href="./media/Ahmed (Frontend Angular).pdf"
+              target="_blank"
+              class="inline-block bg-orange-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-700 transition mt-4"
+              >Open my CV</a
+            >
+          </div>
+        </div>
+        <div class="mt-8 text-center text-sm text-gray-200">
+          <p>&copy; 2025 Ahmed Sayed Abdelwanes. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1
+          },
+          move: { enable: true, speed: 2, direction: "none", random: false }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" }
+          },
+          modes: { repulse: { distance: 100 }, push: { particles_nb: 4 } }
+        },
+        retina_detect: true
+      });
+      particlesJS("footer-particles", {
+        particles: {
+          number: { value: 40, density: { enable: true, value_area: 800 } },
+          color: { value: "#FFD700" },
+          shape: { type: "star" },
+          opacity: { value: 0.6, random: true },
+          size: { value: 4, random: true },
+          line_linked: { enable: false },
+          move: { enable: true, speed: 3, direction: "none", random: true }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "bubble" },
+            onclick: { enable: true, mode: "push" }
+          },
+          modes: {
+            bubble: { distance: 200, size: 6, duration: 2, opacity: 0.8 },
+            push: { particles_nb: 3 }
+          }
+        },
+        retina_detect: true
+      });
+    </script>
+  </body>
+</html>

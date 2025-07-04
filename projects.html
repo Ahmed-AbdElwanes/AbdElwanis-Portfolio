@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Projects by Ahmed Sayed Abdelwanes, showcasing web applications and interactive projects."
+    />
+    <title>Projects | Ahmed Sayed Abdelwanes</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="https://via.placeholder.com/32x32?text=AW"
+      type="image/png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- <style>
+      .section {
+        padding: 5rem 2rem;
+      }
+      .project-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .project-img {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      .logo-img {
+        width: 150px;
+        height: 50px;
+        object-fit: contain;
+      }
+      .mobile-menu {
+        display: none;
+      }
+      .lg\:hidden .mobile-menu {
+        display: block;
+      }
+      .nav-links {
+        display: flex;
+      }
+      .lg\:hidden .nav-links {
+        display: none;
+      }
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 40;
+        padding: 1rem;
+      }
+      .dark .nav-links.active {
+        background-color: #2d3748;
+      }
+      .footer-bg {
+        background: linear-gradient(135deg, #1e3a8a, #f97316);
+        position: relative;
+        overflow: hidden;
+      }
+      #footer-particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+      .footer-content {
+        z-index: 10;
+      }
+      .footer-link:hover {
+        color: #ffd700;
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+      }
+    </style> -->
+  </head>
+  <body
+    class="bg-gray-100 font-sans transition-colors duration-300"
+    id="theme-body"
+  >
+    <!-- Header -->
+    <header>
+      <nav
+        class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 fixed top-0 w-full z-50"
+      >
+        <div
+          class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+        >
+          <a href="index.html" class="flex items-center">
+            <img
+              src="./media/imgs/logo-1.png"
+              class="h-12"
+              alt="Ahmed Abdelwanes Logo"
+            />
+          </a>
+          <div class="flex items-center lg:order-2">
+            <button
+              id="theme-toggle"
+              class="theme-toggle text-gray-700 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white px-4 py-2"
+            >
+              <i class="fas fa-moon text-xl"></i>
+            </button>
+            <button
+              data-collapse-toggle="mobile-menu"
+              type="button"
+              class="mobile-menu inline-flex items-center p-2 ml-1 text-lg text-gray-500 lg:hidden hover:text-shadow-md focus:outline-none hover:text-amber-400 focus:text-amber-700 transition"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div
+            class="nav-links hidden w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu"
+          >
+            <ul
+              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+            >
+              <li>
+                <a
+                  href="index.html"
+                  class="block py-2 pr-4 pl-3 hover:text-orange-600 lg:p-0 hover:bg-orange-300 rounded-lg lg:bg-white text-gray-400 lg:hover:bg-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="block py-2 pr-4 pl-3 hover:text-orange-600 lg:p-0 hover:bg-orange-300 rounded-lg lg:bg-white text-gray-400 lg:hover:bg-white"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="projects.html"
+                  class="block py-2 pr-4 pl-3 hover:text-orange-600 lg:p-0 hover:bg-orange-300 rounded-lg lg:bg-white lg:text-gray-600  lg:hover:bg-white bg-amber-500 text-white"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="block py-2 pr-4 pl-3 hover:text-orange-600 lg:p-0 hover:bg-orange-300 rounded-lg lg:bg-white text-gray-400 lg:hover:bg-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Projects Section -->
+    <section class="section bg-white min-h-screen">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-12 animate__animated animate__fadeIn"
+        >
+          My Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1: Dr. Shimaa Platform -->
+          <div
+            class="project-card bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+          >
+            <div class="project-img">
+              <img
+                src="./media/imgs/shimaa.jpg"
+                alt="Dr. Shimaa Platform"
+                class="w-full h-48 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-900 mb-2">
+                Dr. Shimaa Platform
+              </h3>
+              <p class="text-gray-700 mb-4">
+                An interactive educational platform built with modern web
+                technologies, featuring secure video content delivery and an
+                admin dashboard for registered students.
+              </p>
+              <ul class="list-disc text-gray-600 mb-4 pl-4">
+                <li>Fully responsive design</li>
+                <li>Secure user authentication</li>
+                <li>Custom admin dashboard</li>
+              </ul>
+              <a
+                href="https://ahmed-abdelwanes.github.io/Dr-Shimaa/"
+                target="_blank"
+                class="inline-block bg-gradient-to-r from-red-600 to-amber-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-700 transition"
+                >View Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 2: E-commerce App -->
+          <div
+            class="project-card bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+          >
+            <div class="project-img">
+              <img
+                src="./media/imgs/e-commerce.jpg"
+                alt="E-commerce App"
+                class="w-full h-48 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-900 mb-2">
+                E-commerce Application
+              </h3>
+              <p class="text-gray-700 mb-4">
+                A dynamic e-commerce web app with seamless search, filtering,
+                and responsive browsing, built using modern web frameworks.
+              </p>
+              <ul class="list-disc text-gray-600 mb-4 pl-4">
+                <li>Integrated with Fakestore API</li>
+                <li>Modern UI components</li>
+                <li>Search and filter functionality</li>
+              </ul>
+              <a
+                href="https://github.com/Ahmed-AbdElwanes/E-commerce-app"
+                target="_blank"
+                class="inline-block bg-gradient-to-r from-red-600 to-amber-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-700 transition"
+                >View Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 3: Guess Word Game -->
+          <div
+            class="project-card relative bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+          >
+            <div class="project-img">
+              <img
+                src="./media/imgs/guess-game.jpg"
+                alt="Guess Word Game"
+                class="w-full h-48 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-900 mb-2">
+                Guess Word Game
+              </h3>
+              <p class="text-gray-700 mb-4">
+                An interactive word-guessing game built with HTML, CSS, and
+                JavaScript, featuring a responsive UI and hint/point tracking.
+              </p>
+              <ul class="list-disc text-gray-600 mb-4 pl-4">
+                <li>Dynamic user interface</li>
+                <li>Hint and scoring system</li>
+                <li>Responsive design</li>
+              </ul>
+              <a
+                href="https://ahmed-abdelwanes.github.io/Guess-Game/"
+                target="_blank"
+                class="inline-block bg-gradient-to-r from-red-600 to-amber-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-700 transition"
+                >View Project</a
+              >
+            </div>
+          </div>
+          <!-- Project 4: games world  -->
+          <div
+            class="project-card relative bg-white rounded-lg shadow-lg overflow-hidden animate__animated animate__fadeInUp"
+          >
+            <div class="project-img">
+              <img
+                src="./media/imgs/abdElwanis.jpg"
+                alt="Guess Word Game"
+                class="w-full h-48 object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-900 mb-2">Games World</h3>
+              <p class="text-gray-700 mb-4">
+                An interactive world-game built with HTML, CSS, and JavaScript,
+                featuring a responsive UI and hint/point tracking.
+              </p>
+              <ul class="list-disc text-gray-600 mb-4 pl-4">
+                <li>Dynamic user interface</li>
+                <li>More Animations</li>
+                <li>Responsive design</li>
+              </ul>
+              <a
+                href="https://ahmed-abdelwanes.github.io/Abd-Elwanes/"
+                target="_blank"
+                class="inline-block bg-gradient-to-r from-red-600 to-amber-500 text-white font-bold py-2 px-4 rounded hover:bg-orange-700 transition"
+                >View Project</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-5 text-center mt-3.5">
+        <a
+          href="https://github.com/Ahmed-AbdElwanes"
+          target="_blank"
+          class="footer-link text-gray-200 hover:text-yellow-400"
+          ><button
+            type="button"
+            class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          >
+            All Projects
+          </button></a
+        >
+      </div>
+    </section>
+    <!-- <section class="caruosel"></section> -->
+
+    <!-- Footer -->
+    <footer class="footer-bg text-white py-8">
+      <div id="footer-particles"></div>
+      <div class="footer-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex flex-col items-center md:items-start">
+            <a href="index.html" class="mb-4"
+              ><img
+                src="./media/imgs/logo-1.png"
+                class="w-16"
+                alt="Ahmed Abdelwanes Logo"
+            /></a>
+            <p class="text-sm text-gray-200">
+              Crafting innovative web solutions with passion and precision.
+            </p>
+          </div>
+          <div class="flex flex-col items-center">
+            <h3 class="text-lg font-bold mb-4">Connect With Me</h3>
+            <div class="flex space-x-4">
+              <a
+                href="https://linkedin.com/in/ahmed-weso"
+                target="_blank"
+                class="footer-link text-gray-200 hover:text-yellow-400"
+                ><i class="fab fa-linkedin text-2xl"></i
+              ></a>
+              <a
+                href="https://github.com/Ahmed-AbdElwanes"
+                target="_blank"
+                class="footer-link text-gray-200 hover:text-yellow-400"
+                ><i class="fab fa-github text-2xl"></i
+              ></a>
+              <a
+                href="https://khamsat.com/user/ahmed_abdelwanis1"
+                target="_blank"
+                class="footer-link text-gray-200 hover:text-yellow-400"
+                ><i class="fas fa-briefcase text-2xl"></i
+              ></a>
+
+              <a
+                href="https://wa.me/201114046293"
+                target="_blank"
+                class="footer-linktext-gray-200 hover:text-yellow-400 text-2xl"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+          <div class="flex flex-col items-center md:items-end">
+            <h3 class="text-lg font-bold mb-4">Contact Info</h3>
+            <p class="text-sm text-gray-200">
+              <i class="fas fa-envelope mr-2"></i
+              ><a
+                href="mailto:ahmedabdalwanes842@gmail.com"
+                class="footer-link hover:text-yellow-400"
+                >ahmedabdalwanes842@gmail.com</a
+              >
+            </p>
+            <p class="text-sm text-gray-200">
+              <i class="fas fa-phone mr-2"></i
+              ><a
+                href="tel:+201556650785"
+                class="footer-link hover:text-yellow-400"
+                >+201556650785</a
+              >
+            </p>
+            <a
+              href="./media/Ahmed (Frontend Angular).pdf"
+              target="_blank"
+              class="inline-block bg-orange-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-700 transition mt-4"
+              >Open my CV</a
+            >
+          </div>
+        </div>
+        <div class="mt-8 text-center text-sm text-gray-200">
+          <p>&copy; 2025 Ahmed Sayed Abdelwanes. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      particlesJS("footer-particles", {
+        particles: {
+          number: { value: 40, density: { enable: true, value_area: 800 } },
+          color: { value: "#FFD700" },
+          shape: { type: "star" },
+          opacity: { value: 0.6, random: true },
+          size: { value: 4, random: true },
+          line_linked: { enable: false },
+          move: { enable: true, speed: 3, direction: "none", random: true }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "bubble" },
+            onclick: { enable: true, mode: "push" }
+          },
+          modes: {
+            bubble: { distance: 200, size: 6, duration: 2, opacity: 0.8 },
+            push: { particles_nb: 3 }
+          }
+        },
+        retina_detect: true
+      });
+    </script>
+  </body>
+</html>

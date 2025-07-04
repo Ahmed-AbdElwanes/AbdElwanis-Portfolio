@@ -1,0 +1,253 @@
+@import "tailwindcss";
+nav {
+  box-shadow: 0px 1px 10px 2px #747474;
+}
+.hero-bg {
+  background: linear-gradient(135deg, #1e3a8a, #dd0031);
+  background: linear-gradient(135deg, #ff1414, #007bff);
+  position: relative;
+  overflow: hidden;
+}
+footer a {
+  z-index: 100;
+}
+/* indexes */
+/* index.html */
+/* main animat */
+
+.hero-bg {
+  background: linear-gradient(135deg, #1e3a8a, #f97316);
+  position: relative;
+  overflow: hidden;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.hero-content {
+  z-index: 10;
+}
+/* main animat */
+/* typing animat */
+
+#typing {
+  max-width: fit-content; /* Ensure text doesn't overflow container */
+  padding-inline: 5px;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(255, 255, 255);
+  white-space: nowrap;
+  font-size: 1.5rem; /* Smaller base font size for mobile */
+  font-weight: 800;
+  margin-bottom: 1rem;
+  box-sizing: border-box; /* Prevent padding issues */
+}
+
+/* Responsive font sizes */
+@media (min-width: 640px) {
+  #typing {
+    font-size: 2.5rem; /* Larger font for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  #typing {
+    font-size: 3.5rem; /* Even larger for desktop */
+  }
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blink animation for cursor */
+@keyframes blink {
+  0%,
+  100% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: rgb(255, 255, 255);
+  }
+}
+
+/* Class to trigger typing animation */
+.typing-effect {
+  animation: typing 2s steps(30, end) forwards, blink 0.7s step-end infinite;
+}
+
+/* typing animat */
+/* main button  */
+.sect-about button,
+.info button {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 20;
+}
+.sect-about button:hover,
+.info button:hover {
+  transform: translateY(-3px);
+}
+.sect-about button:active,
+.info button:active {
+  transform: translateY(1px);
+}
+.sect-about button::after,
+.info button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+.sect-about button:hover::after,
+.info button:hover::after {
+  transform: translateX(100%);
+}
+
+.info span {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-color: #fa7406;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform: rotate3d(2, -1, 3, 350deg);
+}
+
+/* main button  */
+
+.section {
+  padding: 5rem 2rem;
+}
+.skill:hover,
+.project-card:hover,
+.contact-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  transition: all 0.3s ease;
+}
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+.theme-toggle:hover i {
+  transform: rotate(180deg);
+}
+.logo-img {
+  width: 150px;
+  height: 50px;
+  object-fit: contain;
+}
+.mobile-menu {
+  display: none;
+}
+.lg\:hidden .mobile-menu {
+  display: block;
+}
+.nav-links {
+  display: flex;
+}
+.lg\:hidden .nav-links {
+  display: none;
+}
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 40;
+  padding: 1rem;
+}
+.dark .nav-links.active {
+  background-color: #2d3748;
+}
+/* footer  */
+.footer-bg {
+  background: linear-gradient(135deg, #1e3a8a, #f97316);
+  position: relative;
+  overflow: hidden;
+}
+#footer-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.footer-content {
+  z-index: 10;
+}
+.footer-link:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* index.html */
+/* projects */
+.project-card::before {
+  content: "";
+  position: absolute;
+  background-color: oklch(74.128% 0.18082 56.25);
+  z-index: 2;
+  height: 2px;
+  width: 0;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.project-card:hover::before {
+  width: 100%;
+}
+/* projects */
+/* about  */
+.journey-bg {
+  background: linear-gradient(135deg, #1e3a8a, #f97316);
+  position: relative;
+  overflow: hidden;
+}
+#journey-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.journey-content {
+  z-index: 10;
+}
+/* about  */
